@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="quanlycuahangModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chitietdonhang">
+    <Key>
+      <PropertyRef Name="MaDH" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaDH" Type="int" Nullable="false" />
+    <Property Name="MaSP" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="TongTien" Type="decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="donhang">
+    <Key>
+      <PropertyRef Name="MaDH" />
+    </Key>
+    <Property Name="MaDH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaKH" Type="int" />
+    <Property Name="MaNV" Type="int" />
+    <Property Name="NgayLap" Type="datetime" Precision="0" />
+    <Property Name="TongTien" Type="decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityType Name="khachhang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenKH" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="SDT" Type="varchar" MaxLength="11" />
+    <Property Name="DiaChi" Type="varchar" MaxLength="255" />
+    <Property Name="MST" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="nhacungcap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNCC" Type="varchar" MaxLength="45" />
+    <Property Name="SDT" Type="varchar" MaxLength="11" />
+    <Property Name="DiaChi" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="nhanvien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNV" Type="varchar" MaxLength="45" />
+    <Property Name="SDT" Type="varchar" MaxLength="11" />
+    <Property Name="DiaChi" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sanpham">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSP" Type="varchar" MaxLength="45" />
+    <Property Name="MaNCC" Type="int" />
+    <Property Name="GiaBan" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="AnhSP" Type="binary" MaxLength="1" />
+    <Property Name="GiaGoc" Type="decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="quanlycuahangModelStoreContainer">
+    <EntitySet Name="chitietdonhang" EntityType="Self.chitietdonhang" Schema="quanlycuahang" store:Type="Tables" />
+    <EntitySet Name="donhang" EntityType="Self.donhang" Schema="quanlycuahang" store:Type="Tables" />
+    <EntitySet Name="khachhang" EntityType="Self.khachhang" Schema="quanlycuahang" store:Type="Tables" />
+    <EntitySet Name="nhacungcap" EntityType="Self.nhacungcap" Schema="quanlycuahang" store:Type="Tables" />
+    <EntitySet Name="nhanvien" EntityType="Self.nhanvien" Schema="quanlycuahang" store:Type="Tables" />
+    <EntitySet Name="sanpham" EntityType="Self.sanpham" Schema="quanlycuahang" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
