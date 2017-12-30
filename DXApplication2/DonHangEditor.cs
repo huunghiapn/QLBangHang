@@ -18,5 +18,14 @@ namespace DXApplication2
         {
             InitializeComponent();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frmChonKH frmChonKH = new frmChonKH();
+            frmChonKH.ShowDialog();
+            String[] result = frmChonKH.getResult();
+            this.MaKH.Text = result[0];
+            this.TenKH.Text = result[1];
+        }
     }
 }

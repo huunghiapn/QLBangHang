@@ -62,6 +62,7 @@
             // MaNCC
             // 
             this.SetBoundFieldName(this.MaNCC, "MaNCC");
+            this.SetBoundPropertyName(this.MaNCC, "EditValue");
             this.MaNCC.Location = new System.Drawing.Point(72, 66);
             this.MaNCC.Name = "MaNCC";
             this.MaNCC.Size = new System.Drawing.Size(100, 20);
@@ -140,10 +141,12 @@
             this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SetBoundFieldName(this.pictureEdit1, "AnhSP");
             this.SetBoundPropertyName(this.pictureEdit1, "EditValue");
+            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit1.Location = new System.Drawing.Point(454, 15);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.ZoomAccelerationFactor = 1D;
             this.pictureEdit1.Size = new System.Drawing.Size(247, 178);
             this.pictureEdit1.TabIndex = 8;
             this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
@@ -160,7 +163,7 @@
             // TenNCC
             // 
             this.SetBoundPropertyName(this.TenNCC, "");
-            this.TenNCC.Location = new System.Drawing.Point(72, 66);
+            this.TenNCC.Location = new System.Drawing.Point(72, 87);
             this.TenNCC.Name = "TenNCC";
             this.TenNCC.Size = new System.Drawing.Size(100, 20);
             this.TenNCC.TabIndex = 10;

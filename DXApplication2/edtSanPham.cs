@@ -22,9 +22,9 @@ namespace DXApplication2
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            frmChonKH frmChonKH = new frmChonKH();
-            frmChonKH.ShowDialog();
-            String[] result = frmChonKH.getResult();
+            frmChonNCC frmChonNCC = new frmChonNCC();
+            frmChonNCC.ShowDialog();
+            String[] result = frmChonNCC.getResult();
             this.MaNCC.Text = result[0];
             this.TenNCC.Text = result[1];
         }
